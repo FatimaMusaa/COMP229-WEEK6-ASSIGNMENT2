@@ -26,13 +26,13 @@
           <a class="nav-link <%= (page == 'contactMe') ? 'active' : ''; %>" aria-current="page" href="/contactMe"><i class="fa-solid fa-envelopes-bulk fa-lg"></i> Contact Me</a>
         </li> 
 
-        <!--<%= displayName %>-->
+    <%= displayName %>
 
         <li class="nav-item">
-          <a class="nav-link <%= (page == 'business-list') ? 'active' : ''; %>" aria-current="page" href="/business-list"><i class="fa-solid fa-table-list fa-lg"></i> Business List</a>
+          <a class="nav-link <%= (page == 'business-list') ? 'active' : ''; %>" aria-current="page" href="/business-list"><i class="fa-solid fa-table-list fa-lg"></i> Business Contact Lists</a>
         </li>
 
-        <% if(displayName) { %>
+       <% if(displayName) { %>
 
          
 
@@ -40,12 +40,12 @@
           <a class="nav-link" aria-current="page" href="/logout"><i class="fa-solid fa-right-to-bracket fa-lg"></i> Logout</a>
         </li> 
 
-        <% } else { %>
+        <% } else { %> 
 
         <li class="nav-item">
           <a class="nav-link <%= (page == 'login') ? 'active' : ''; %>" aria-current="page" href="/login"><i class="fa-solid fa-right-to-bracket fa-lg"></i> Login</a>
         </li> 
-        <% } %>
+     <% } %> 
 
       </ul>
     </div>

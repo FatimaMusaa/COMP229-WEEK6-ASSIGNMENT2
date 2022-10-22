@@ -1,8 +1,8 @@
 <div class="container">
-    <h1>Movie List</h1>
+    <h1>Business Contact List</h1>
     <% if(displayName){ %>
-    <a href="/movie-add" class="btn btn-primary" role="button">
-        <i class="fas fa-plus-circle"></i> Add a Movie</a>
+    <a href="/business-add" class="btn btn-primary" role="button">
+        <i class="fas fa-plus-circle"></i> Add a Business Contact</a>
         <% } %>
     <div class="row">
         <div class="col">
@@ -11,43 +11,43 @@
                 <thead class="table-dark">
                     <tr>
                         <th scope="col" class="text-center">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Year</th>
-                        <th scope="col">Director</th>
-                        <th scope="col">Genre</th>
-                        <th scope="col">Runtime</th>
+                        <th scope="col">Contact Name</th>
+                        <th scope="col">Contact Number</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Company</th>
                         
-                        <% if(displayName){ %>
+                        
+                     <% if(displayName){ %>
                         <th></th>
                         <th></th>
                         <% } %>
                     </tr>
                 </thead>
-                <tbody id="movieList">
+                <tbody id="businessList">
                     <!-- Repeatable Rows -->
-                    <% for(let count = 0; count < movies.length; count++) { %>
+                    <% for(let count = 0; count < business.length; count++) { %>
                         <tr>
                             <th scope="row" class="text-center"><%= count + 1 %></th>
-                            <td><%= movies[count].name %></td>
-                            <td><%= movies[count].year %></td>
-                            <td><%= movies[count].director %></td>
-                            <td><%= movies[count].genre %></td>
-                            <td><%= movies[count].runtime %></td>
+                            <td><%= business[count].contactName %></td>
+                            <td><%= business[count].contactNumber %></td>
+                            <td><%= business[count].Email %></td>
+                            <td><%= business[count].Company %></td>
                             
-                            <% if(displayName){ %>
+                            
+                          <% if(displayName){ %>
 
                             <td class="text-center col-1">
-                                <a href="/movie-edit/<%= movies[count]._id %>"
+                                <a href="/business-edit/<%= business[count]._id %>"
                                     class="btn btn-primary btn-sm">
                                     <i class="fas fa-pencil-alt"></i> Edit</a>
                             </td>
                             
                             <td class="text-center col-1">
-                                <a href="/movie-delete/<%= movies[count]._id %>"
+                                <a href="/business-delete/<%= business[count]._id %>"
                                     class="btn btn-danger btn-sm">
                                     <i class="fas fa-trash-alt"></i> Delete</a>
                             </td>
-                            <% } %>
+                         <% } %>-
                         </tr>
                     <% } %>
                 </tbody>

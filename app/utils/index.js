@@ -5,6 +5,7 @@ export function UserDisplayName(req){
         return res.user.displayName;
     }
     return '';
+    
 }
 export function AuthGuard(req, res, next){
     if(!req.isAuthenticated()){
